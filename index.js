@@ -12,10 +12,7 @@ menuIcon.onclick = () => {
 };
 
 // *=============================== github calender ==================================
-    GitHubCalendar(".calendar", "RapidKS");
 
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "RapidKS", { responsive: true });
 
 // *=============================== resume open in new tab ==================================
 
@@ -25,7 +22,7 @@ menuIcon.onclick = () => {
 
     function NewTab() {
       window.open(
-        "https://onedrive.live.com/?cid=C961460684D95160&id=C961460684D95160%21355&parId=root&o=OneUp",
+        "https://drive.google.com/file/d/114X1PVTJ9WJYLYdf-dpMAkgKuIwveKdm/view?usp=sharing",
         "_blank"
       );
     }
@@ -90,12 +87,12 @@ const typed = new Typed('.multiple-text', {
 
 GitHubCalendar(".calendar", "RapidKS");
 
-// or enable responsive functionality:
-GitHubCalendar(".calendar", "RapidKS", { responsive: true });
+    // or enable responsive functionality:
+    GitHubCalendar(".calendar", "RapidKS", { responsive: true });
 
-// Use a proxy
-GitHubCalendar(".calendar", "RapidKS", {
-   proxy (username) {
-     return fetch(`https://your-proxy.com/github?user=${username}`)
-   }
-});
+    // Use a proxy
+    GitHubCalendar(".calendar", "RapidKS", {
+       proxy (username) {
+         return fetch(`https://your-proxy.com/github?user=${username}`)
+       }
+    }).then(r => r.text())
